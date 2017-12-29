@@ -256,3 +256,23 @@ function find(numbersArray, singleNum) {
 console.log("Index of the first 6 in [4, 7, 6, 99, 44, 6]: " + find([4, 7, 6, 99, 44, 6], 6));
 console.log("Index of the first 9 in [4, 7, 6, 99, 44, 6]: " + find([4, 7, 6, 99, 44, 6], 9));
 console.log("");
+
+// 16 | map
+// Is this how i should do this???
+
+function addTwo(arr) {
+    let newArr = []
+    for (num of arr){
+        newArr.push(num + 2);
+    }
+
+    return newArr;
+}
+
+function map(arr, pleaseAddTwo) {
+    arr.push(1);
+    arr.push(2);
+    return pleaseAddTwo(arr);
+}
+
+console.log(map([], addTwo));
