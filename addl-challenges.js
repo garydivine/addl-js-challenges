@@ -97,7 +97,15 @@ console.log("");
 // 08 | weave
 
 function weave(str, num) {
-    return "Not done"
+    let newStr = "";
+    for (let i = 0; i < str.length; i += 1){
+        if ((i+1) % parseInt(num) == 0) {
+            newStr = newStr.concat("x")
+        } else {
+            newStr = newStr.concat(str[i]);
+        }
+    }
+    return newStr;
 }
 
 console.log("Replacing every 3rd character in word javascript with x: " + weave("javascript", 3) )
